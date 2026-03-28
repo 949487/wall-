@@ -1,0 +1,25 @@
+[
+  {
+    "sourceName": "壁纸喵-简版",
+    "sourceUrl": "http://service.picasso.adesk.com",
+    "enabled": true,
+    "enableJs": true,
+    "ruleArticles": "$.res.vertical[*]",
+    "ruleImage": "$.img",
+    "ruleLink": "$.img",
+    "ruleTitle": "$.store",
+    "rulePubDate": "❤️{{$.favs}}",
+    "sortUrl": "首页::http://service.picasso.adesk.com/v1/vertical/vertical?disorder=true&limit=16&skip={{(page-1)*16}}&adult=false&first=1&order=hot"
+  },
+  {
+    "sourceName": "壁纸喵-扩展",
+    "sourceUrl": "http://service.picasso.adesk.com/v1/lightwp/category",
+    "enabled": true,
+    "enableJs": true,
+    "loadWithBaseUrl": true,
+    "ruleArticles": "$.res.category||$.res.album||$.res.keyword[0].items",
+    "ruleImage": "$..cover||$.img",
+    "ruleTitle": "$..name||$.category",
+    "sortUrl": "竖屏::http://service.picasso.adesk.com/v1/vertical/category\n横屏::http://service.picasso.adesk.com/v1/wallpaper/category"
+  }
+]
