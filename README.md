@@ -29,10 +29,15 @@ config/            规则源示例
 ## 构建
 
 - JDK 17
-- Android Studio（AGP 8.7.3 / Kotlin 2.0.21）
-- compileSdk 36、minSdk 28
+- Android Studio（AGP 8.7.3 / Kotlin 2.0.21 / Gradle 8.9）
+- compileSdk 35、minSdk 28
 
-仓库暂未包含 Gradle Wrapper，直接用 Android Studio 打开根目录同步构建即可。首次运行需在本地生成 `local.properties` 指向你的 SDK 路径（该文件已被忽略，不要提交）。
+```bash
+./gradlew :app:assembleDebug
+# 产物：app/build/outputs/apk/debug/app-debug.apk
+```
+
+首次运行需在本地生成 `local.properties` 指向你的 SDK 路径（该文件已被忽略，不要提交）。GitHub Actions 会自动构建 debug APK 并上传为 artifact（见 `.github/workflows/android-build.yml`）。
 
 ## 规则源
 
