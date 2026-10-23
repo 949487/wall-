@@ -14,5 +14,13 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "wall"
-include(":app")
+rootProject.name = "Bizhi"
+include(
+    ":app",
+    ":feature_home",
+    ":feature_tools",
+    ":feature_settings",
+    ":core_network",
+    ":core_wallpaper",
+    ":core_xpath"
+)
